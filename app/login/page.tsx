@@ -104,8 +104,8 @@ function LoginMessage(oauth: boolean) {
 function UnsuspendedPage() {
   const [oauth, setOauth] = useState(false)
   const dispatch = useAppDispatch()
-  const accessToken = useAppSelector((state) => state.tokens.access_token)
-  const isLoggedIn = useAppSelector((state) => loggedIn(state))
+  const accessToken = useAppSelector((state: any) => state.tokens.access_token)
+  const isLoggedIn = useAppSelector((state: any) => loggedIn(state))
   const searchParams = useSearchParams();
   const router = useRouter();
 
